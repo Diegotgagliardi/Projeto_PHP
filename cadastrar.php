@@ -1,5 +1,5 @@
 <?php
-require('db/conexao.php');
+require('config/conexao.php');
     //VERIFICAR SE A POSTAGEM EXISTE DE ACORDO COM OS CAMPOS
 if(isset($_POST['nome_completo']) && isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['repete_senha'])){
     //VERIFICAR SE TODOS OS CAMPOS FORAM PREENCHIDOS

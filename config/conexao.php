@@ -3,7 +3,7 @@ $modo = 'local';
 if($modo == 'local'){
     $servidor = "localhost";
     $usuario = "root";
-    $senha = "asusp8z77mPro";
+    $senha = "";
     $banco = "login";
 }
 
