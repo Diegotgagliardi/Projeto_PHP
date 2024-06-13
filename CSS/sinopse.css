@@ -17,6 +17,14 @@ body {
   padding: 0 25px 0 25px;
 
   background-color: #2b2927;
+  color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.tit_filme {
+  position: absolute;
+  top: 55%;
+  padding-left: 25px;
 }
 
 .fundo_filme {
@@ -24,16 +32,61 @@ body {
   left: 20%;
   height: 70%;
   width: 100%;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 10px 10px;
   border-image: none;
+
+ -webkit-mask-image: linear-gradient(to top, transparent 12%, black 100%);
 }
 
 .text_sinopse p{
   box-sizing: inherit;
-  color: white;
-  margin-top: 20px;
+  padding-left: 15px;
   width: 75%;
 
   text-align: justify;
   font-size: 17px;
+}
+
+.btn_watch {
+  position: absolute;
+  top: 54%;
+  right: 55px;
+  width: 15%;
+  height: 5%;
+
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.info_filme {
+  position: absolute;
+  bottom: 40px;
+  margin-left: 20px;
+}
+
+.info_filme p { 
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.tit_rodape {
+  box-sizing: inherit;
+  bottom: 20px;
+  padding-top: 10px;
+
+  font-size: 15px;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: 7%;
+  width: 100%;
+  background-color: #2b2927;
+
+  text-align: center;
 }
