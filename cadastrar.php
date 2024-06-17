@@ -61,26 +61,38 @@ if(isset($_POST['nome_completo']) && isset($_POST['email']) && isset($_POST['sen
 
         <div class="input-login">
             <img class="input-icon" src="img/nomecompleto.png">
-            <input <?php if(isset($erro_geral)) {echo 'class="Erro-input"';}?> class="erro-input" type="text" name="nome" placeholder="Digite seu nome completo" required>
-            <!-- <div class="erro">Por favor informe um nome válido!</div> -->
+            <input <?php if(isset($erro_geral) or ($erro_nome)) {echo 'class="Erro-input"';}?> class="erro-input" type="text" name="nome_completo" placeholder="Digite seu nome completo" required>
+            <?php if(isset($erro_nome)){?>
+            <div class="erro"><?php echo $erro_nome; ?></div>
+            <?php } ?>
         </div>
 
         <div class="input-login">
             <img class="input-icon" src="img/login.png">
-            <input <?php if(isset($erro_geral)) {echo 'class="Erro-input"';}?> type="email" name="email" placeholder="Digite seu email" required>
+            <input <?php if(isset($erro_geral) or isset($erro_nome)) {echo 'class="Erro-input"';}?> type="email" name="email" placeholder="Digite seu email" required>
+            <?php if(isset($erro_email)){?>
+            <div class="erro"><?php echo $erro_email; ?></div>
+            <?php } ?>
         </div>
-
+            
         <div class="input-login">
             <img class="input-icon" src="img/senha.png">
-            <input <?php if(isset($erro_geral)) {echo 'class="Erro-input"';}?> type="password" name="senha" placeholder="Digite sua senha (6 dígitos)" required>
+            <input <?php if(isset($erro_geral) or isset($erro_senha)) {echo 'class="Erro-input"';}?> type="password" name="senha" placeholder="Digite sua senha (6 dígitos)" required>
+            <?php if(isset($erro_senha)){?>
+            <div class="erro"><?php echo $erro_senha; ?></div>
+            <?php } ?>
         </div>
+        
 
         <div class="input-login">
             <img class="input-icon" src="img/confsenha.png">
-            <input <?php if(isset($erro_geral)) {echo 'class="Erro-input"';}?> type="password" name="repete_senha" placeholder="Repita a senha" required>
+            <input <?php if(isset($erro_geral) or isset($erro_repete_senha)) {echo 'class="Erro-input"';}?> type="password" name="repete_senha" placeholder="Repita a senha" required>
+            <?php if(isset($erro_repete_senha)){?>
+            <div class="erro"><?php echo $erro_repete_senha; ?></div>
+            <?php } ?>
         </div>
 
-        <div <?php if(isset($erro_geral)) {echo 'class="Erro-input"';}?> class="input-login">
+        <div <?php if(isset($erro_geral) or isset($erro_checkbox)) {echo 'class="Erro-input"';}else{echo 'class="input-group"'}?>>
             <input  type="checkbox" id="termos" name="termos" value="Ok" required>
             <label for="termos">Ao se cadastrar você concorda com a nossa <a class="link" href="#">Política de Privacidade</a> e os <a class="link" href="#"></a> termos de uso</a></label>
         </div>

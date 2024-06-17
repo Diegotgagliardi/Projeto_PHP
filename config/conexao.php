@@ -1,13 +1,15 @@
 <?php
-$modo = 'local';
-if($modo == 'local'){
-    $servidor = "localhost";
+/* DOIS MODOS POSSÍVEIS -> local, producao*/
+$modo = 'local'; 
+
+if($modo =='local'){
+    $servidor ="localhost";
     $usuario = "root";
     $senha = "";
     $banco = "login";
 }
 
-if($modo == 'producao'){
+if($modo =='producao'){
     $servidor ="";
     $usuario = "";
     $senha = "";
@@ -15,11 +17,11 @@ if($modo == 'producao'){
 }
 
 try{
-    $pdo = new PDO("mysql:host=$servidor; dbname=$banco",$usuario,$senha);
-    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRM_EXCEPTION);
-    echo "Banco conectado com sucesso!";
+   $pdo = new PDO("mysql:host=$servidor;dbname=$banco",$usuario,$senha); 
+   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+   //echo "Banco conectado com sucesso!"; 
 }catch(PDOException $erro){
-    echo "falha ao se conectar com o banco!".$erro->getMessage();
+    echo "Falha ao se conectar com o banco! ";
 }
 
 function limparPost($dados){
