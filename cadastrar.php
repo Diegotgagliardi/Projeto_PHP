@@ -57,7 +57,7 @@ if(isset($_POST['nome_completo']) && isset($_POST['email']) && isset($_POST['sen
                     
                     //MODO LOCAL    
                     if($modo =="local"){
-                        header('location: index.php?result=ok');
+                        header('location: login.php?result=ok');
                     }
                 }
             }
@@ -76,7 +76,7 @@ if(isset($_POST['nome_completo']) && isset($_POST['email']) && isset($_POST['sen
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/estilo.css" rel="stylesheet">
+    <link href="CSS/estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Cadastrar</title>
 </head>
@@ -142,7 +142,7 @@ if(isset($_POST['nome_completo']) && isset($_POST['email']) && isset($_POST['sen
 
 
         <button class="btn-blue" type="submit">Cadastrar</button>
-        <a href="index.php">Já tenho uma conta</a>
+        <a href="login.php">Já tenho uma conta</a>
     </form>
 </body>
 
