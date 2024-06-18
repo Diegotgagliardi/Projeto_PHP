@@ -37,39 +37,53 @@
         }
 
         .filme {
-            background-color: #111;
+            background-color: #111; 
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.2s ease-in-out;
+            overflow: hidden; 
         }
 
         .filme-info {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: column; 
+            align-items: center; 
             text-align: center; 
+            height: 100%; 
         }
 
         .filme img {
-            width: calc(100% - 20px); 
-            max-height: calc(100% - 20px); 
+            width: 100%; 
+            height: auto; 
             border-radius: 10px;
-            margin-bottom: 10px; 
+            transition: transform 0.2s ease-in-out;
         }
 
         .filme h2 {
-            font-size: 1.2em;
-            margin: 0;
+            font-size: 1.2em; 
+            margin: 10px 0 0;
         }
 
-        .filme a {
-            text-decoration: none;
-            color: #ffffff; 
+        .ver-sinopse {
+            background-color: #1DB954; 
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            margin-top: 10px; 
+            text-decoration: none; 
+            display: inline-block; 
+        }
+
+        .ver-sinopse:hover {
+            background-color: #13a143; 
         }
 
         .filme:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); 
         }
 
         @media (max-width: 768px) {
@@ -87,7 +101,7 @@
         
         <div class="filmes-container">
             <?php
-           
+
             $filmes = [
                 ["id" => 1, "nome" => "Spider-Man", "imagem" => "img/spiderman.jpg"],
                 ["id" => 2, "nome" => "The Batman", "imagem" => "img/batman.jpg"],
@@ -103,15 +117,15 @@
                 ["id" => 12, "nome" => "Todo Mundo em Pânico", "imagem" => "img/panico.jpg"]
             ];
 
+
             foreach ($filmes as $filme):
             ?>
             <div class="filme">
-                <a href="sinopse.php?id=<?= $filme['id'] ?>">
-                    <div class="filme-info">
-                        <img src="<?= $filme['imagem'] ?>" alt="<?= $filme['nome'] ?>">
-                        <h2><?= $filme['nome'] ?></h2>
-                    </div>
-                </a>
+                <div class="filme-info">
+                    <img src="<?= $filme['imagem'] ?>" alt="<?= $filme['nome'] ?>">
+                    <h2><?= $filme['nome'] ?></h2>
+                    <a href="sinopse.php?id=<?= $filme['id'] ?>" class="ver-sinopse">Ver Sinopse</a>
+                </div>
             </div>
             <?php endforeach; ?>
         </div>

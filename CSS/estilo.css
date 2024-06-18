@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -14,7 +14,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form{
+form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -26,14 +26,14 @@ form{
     box-shadow: 0px 0px 20px #bebebe;
 }
 
-h1{
+h1 {
     font-size: 2rem;
     width: 100%;
     text-align: center;
     font-weight: 900;
 }
 
-input{
+input {
     width: 95%;
     height: 60px;
     border-radius: 5px;
@@ -43,11 +43,11 @@ input{
     padding-left: 20%;
 }
 
-input:focus{
+input:focus {
     outline-color: #00c3ff;
 }
 
-.btn-login{
+.btn-blue {
     width: 90%;
     padding: 20px;
     margin: 20px 0px 20px 0px;
@@ -61,42 +61,43 @@ input:focus{
     transition: 0.5s ease;
 }
 
-.btn-login:hover{
+.btn-blue:hover {
     background: #038bb4;
 }
 
-a{
+a {
     text-decoration: none;
     margin-top: 10px;
     margin-bottom: 20px;
     color: black;
 }
 
-a:hover{
+a:hover {
     color: #00c3ff;
 }
 
-.link{
+.link {
     color: #00c3ff;
     text-decoration: underline;
 }
 
-.input-login{
+.input-group {
     width: 90%;
 }
-.input-icon{
+
+.input-icon {
     width: 60px;
     position: absolute;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     display: inline-block;
     height: 20px;
     width: 5%;
     vertical-align: middle;
 }
 
-label{
+label {
     display: inline-block;
     width: 85%;
     font-size: 13px;
@@ -105,8 +106,8 @@ label{
     word-wrap: break-word;
 }
 
-.erro-form{
-    background: red;
+.erro-geral {
+    background: #c82a2a;
     color: white;
     font-weight: bold;
     padding: 20px;
@@ -114,13 +115,31 @@ label{
     margin-bottom: 15px;
 }
 
-.erro-input{
-    border: 1px solid red;
+.erro-input {
+    border: 1px solid #c82a2a;
 }
 
-.erro{
-    color: red;
+.erro {
+    color: #c82a2a;
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
+    font-size: 14px;
+}
+
+.sucesso {
+    background: #2ac874;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
 }
