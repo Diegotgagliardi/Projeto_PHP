@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo com Sugestões de Filmes</title>
+    <link rel="stylesheet" href="trailer.css">
+</head>
+
+<body>
+    <div id="video-container">
+        <iframe id="youtube-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+
+    <div id="content">
+        <h2>Confira também:</h2>
+        <div id="image-links">
+            <a href="link1.html"><img src="img/minions.jpg" alt="Filme 1"></a>
+            <a href="link2.html"><img src="img/dune.jpg" alt="Filme 2"></a>
+            <a href="link3.html"><img src="img/bob.jpg" alt="Filme 3"></a>
+            <a href="link4.html"><img src="img/wonderwoman.jpg" alt="Filme 4"></a>
+            <a href="link5.html"><img src="img/spiderman.jpg" alt="Filme 5"></a>
+            <a href="link6.html"><img src="img/batman.jpg" alt="Filme 6"></a>
+        </div>
+        <h3>Mais sugestões para você:</h3>
+        <div id="suggestions">
+            <?php
+            $suggestions = [
+                ["title" => "Filme 1", "description1" => "Descrição do Filme 1", "description2" => "Outra Descrição do Filme 1"],
+                ["title" => "Filme 2", "description1" => "Descrição do Filme 2", "description2" => "Outra Descrição do Filme 2"],
+                ["title" => "Filme 3", "description1" => "Descrição do Filme 3", "description2" => "Outra Descrição do Filme 3"],
+                ["title" => "Filme 4", "description1" => "Descrição do Filme 4", "description2" => "Outra Descrição do Filme 4"],
+                ["title" => "Filme 5", "description1" => "Descrição do Filme 5", "description2" => "Outra Descrição do Filme 5"]
+            ];
+            ?>
+        </div>
+        <hr>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
