@@ -41,7 +41,7 @@ if (isset($_GET['id']) && array_key_exists($_GET['id'], $filmes)) {
       <h1><?php echo $filme['titulo'];?></h1>
     </div>
     <div class="btns">
-      <button type="button" class="btn_watch"><a href="filmes.php?id=<?= $filme['id'] ?>">Assistir Trailer</a></button>
+      <button type="button" class="btn_watch"><a href="index.php?id=<?= $filme['id'] ?>">Assistir Trailer</a></button>
     </div>
     <div class="text_sinopse">
       <p><?php echo $filme['sinopse'];?></p>
