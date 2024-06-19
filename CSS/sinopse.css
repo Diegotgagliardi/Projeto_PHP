@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   background-color: #2b2927;
   color: white;
   border-radius: 0 0 8px 8px;
+  overflow: hidden;
 }
 
 .tit_filme {
@@ -29,9 +31,10 @@ body {
 
 .fundo_filme {
   box-sizing: inherit;
-  left: 20%;
-  height: 70%;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
   border-radius: 0 0 10px 10px;
   border-image: none;
 
@@ -53,12 +56,18 @@ body {
   right: 55px;
   width: 15%;
   height: 5%;
-
-  text-decoration: none;
   border: none;
   border-radius: 8px;
   font-size: 17px;
-  font-weight: lighter;
+  border: none;
+  color: black;
+}
+
+.btns a:hover {
+  transition: all 1s;
+  color: white;
+  background-color: #20211C;
+  border: white 2px solid;
 }
 
 .info_filme {
@@ -83,7 +92,7 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   height: 7%;
   width: 100%;
   background-color: #2b2927;
